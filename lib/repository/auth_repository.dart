@@ -7,8 +7,9 @@ class AuthRepository {
 
   Future<dynamic> login(dynamic data) async {
     try {
-      dynamic response = _apiservice.getPostApiResponse(AppUrl.baseUrl, data);
+      dynamic response = _apiservice.getPostApiResponse(AppUrl.loginUrl, data);
       return response;
+      
     } catch (e) {
       throw e;
     }
